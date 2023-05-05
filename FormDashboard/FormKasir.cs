@@ -17,6 +17,8 @@ namespace Pelatihan_CSharp.FormDashboard
             InitializeComponent();
             lblNama.Text = Data[0];
             lblJabatan.Text = Data[1];
+            WindowState = FormWindowState.Maximized;
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -43,6 +45,16 @@ namespace Pelatihan_CSharp.FormDashboard
             {
                 //do something else
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelView_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

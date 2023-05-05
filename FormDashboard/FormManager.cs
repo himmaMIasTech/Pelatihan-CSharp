@@ -17,6 +17,7 @@ namespace Pelatihan_CSharp.FormDashboard
             InitializeComponent();
             lblNama.Text = Data[0];
             lblJabatan.Text = Data[1];
+            WindowState = FormWindowState.Maximized;
 
         }
 

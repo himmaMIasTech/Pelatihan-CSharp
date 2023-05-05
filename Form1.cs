@@ -19,34 +19,14 @@ namespace Pelatihan_CSharp
             InitializeComponent();
         }
 
+        int startpoint = 0;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
 
-            try
-            {
-                connection.Open();
-                // Kode untuk melakukan query atau manipulasi data di database
-
-                if (connection.State == ConnectionState.Open)
-                {
-                    label1.Text = "Koneksi berhasil";
-                }
-                else
-                {
-                    label1.Text = "Koneksi gagal";
-                }
-            }
-            catch (Exception ex)
-            {
-                // Tangani exception
-                label1.Text = ex.Message.ToString();
-            }
-            finally
-            {
-                connection.Close();
-            }
+            timer1.Start();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -57,6 +37,27 @@ namespace Pelatihan_CSharp
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            startpoint += 3;
+            // kasih value ke progress bar
+            guna2ProgressBar1.Value = startpoint;
+
+            // validasi mengatasi value menjadi 102
+            if (guna2ProgressBar1.Value == 99)
+            {
+                guna2ProgressBar1.Value = 100;
+                timer1.Stop();
+
+                // instansiasi class
+                LoginForm fl = new LoginForm();
+
+                // tutup form Form1 dan menampilkan LoginForm
+                this.Hide();
+                fl.Show();
+            }
         }
     }
 }

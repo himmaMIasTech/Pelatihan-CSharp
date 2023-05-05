@@ -16,9 +16,13 @@ namespace Pelatihan_CSharp.FormDashboard
         public FormAdmin(string[] Data)
         {
             InitializeComponent();
+
+            // mendapat data user yang login
             lblNama.Text = Data[0];
             lblJabatan.Text = Data[1];
-            
+
+            // untuk membuat window penuh pada layar
+            WindowState = FormWindowState.Maximized;
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)

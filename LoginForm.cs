@@ -103,5 +103,15 @@ namespace Pelatihan_CSharp
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
