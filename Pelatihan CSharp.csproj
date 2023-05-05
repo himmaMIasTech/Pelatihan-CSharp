@@ -130,6 +130,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="pelatihan_cSharpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pelatihan_cSharpDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -167,6 +172,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="pelatihan_cSharpDataSet.xsc">
+      <DependentUpon>pelatihan_cSharpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pelatihan_cSharpDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pelatihan_cSharpDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pelatihan_cSharpDataSet.xss">
+      <DependentUpon>pelatihan_cSharpDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
